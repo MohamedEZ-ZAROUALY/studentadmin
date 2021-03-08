@@ -23,7 +23,7 @@ int main (){
         }
     }while(choix!='c');
     
-    while(1==1){
+    while(1){
         AfficherMenu();
         printf("\n votre choix : ");
         scanf("%d",&selection);
@@ -32,14 +32,14 @@ int main (){
             case 1 : Remplissage();break;
             case 2 : Affichage();break;
             case 3 : Ajout();break;
-            case 4 : printf("\n\n4,%d\n\n",selection);selectionEtudiant(2,mtr,&moy);Modifier(mtr,moy);break;
-            case 5 : printf("\n\n5,%d\n\n",selection);selectionEtudiant(1,mtr,&moy);Suppression(mtr);break;
-            case 6 : printf("\n\n6,%d\n\n",selection);selectionEtudiant(1,mtr,&moy);Recherche(2,mtr);break;
+            case 4 : selectionEtudiant(2,mtr,&moy);Modifier(mtr,moy);break;
+            case 5 : selectionEtudiant(1,mtr,&moy);Suppression(mtr);break;
+            case 6 : selectionEtudiant(1,mtr,&moy);Recherche(2,mtr);break;
             case 7 : TriAlphabetique();break;
             case 8 : TriMerite();break;
             default: printf("veillez selectionez un choix valide\n");break;
         }
-        printf("\ntapez enter pour continuier\n");
+        printf("\nTapez enter pour continuer\n");
         fflush(stdin);
         gets(&choix);
 

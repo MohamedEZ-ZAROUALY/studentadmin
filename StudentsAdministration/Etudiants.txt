@@ -1,5 +1,4 @@
 2/Achraf dekhan/202/77/3/0.00
-69/FREDI MERCURY/1111/12/12/888.00
 2/aymanito lashbabito/1200/13/1/21.00
 1/brahimos oukouyos/1560/2/35/22.00
 3/chihab lahlmous/2000/12/22/9900.00
@@ -8,4 +7,3 @@
 898/hgc54/8/5/54/5.00
 11212/quandahar kilo/1390/90/12/40.00
 13/simo/200/20/12/23.00
-58/vkg/85/47/478/10.00

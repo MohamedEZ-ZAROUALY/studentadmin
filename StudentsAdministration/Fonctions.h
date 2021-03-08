@@ -10,7 +10,7 @@ void AfficherMenu(){
     printf("Nous vous proposons plusieurs choix parmi lesquels vous pouvez choisir pour effectuer l\'operation voulue\n");
     printf("Pour appliquer votre choix veuillez entrer le numero indique a cote des choix\n");
     printf("\n");
-    printf("  1 - Remplissage\t\t  2 - Affichage\n\n  3 - Ajout\t\t\t  4 - Modification\n\n  5 - Suppression\t\t  6 - Recherche\n\n  7 - Tri Alphabetique\t\t  8 - Tri par metite\n\n\t\t0 - Quitter la plateforme");
+    printf("  1 - Remplissage\t\t  2 - Affichage\n\n  3 - Ajout\t\t\t  4 - Modification\n\n  5 - Suppression\t\t  6 - Recherche\n\n  7 - Tri Alphabetique\t\t  8 - Tri par merite\n\n\t\t0 - Quitter la plateforme");
     printf("\n");
 }
 
@@ -107,13 +107,14 @@ void Ajout(){
         printf("Entrez la matricule de l\'etudiant \n ");
         fflush(stdin);
         scanf("%ld",&etudiant.matricule);
-        fprintf(file,"%ld",etudiant.matricule);
         char mat[10];
         itoa(etudiant.matricule,mat,10);
         if(Recherche(1,mat)==1){
             fclose(file);
             return;
         }
+        fprintf(file,"%ld",etudiant.matricule);
+        
         
         printf("Entrez le nom de l\'etudiant \n ");
         fflush(stdin);
@@ -142,7 +143,7 @@ void Ajout(){
 
         fclose(file);
     }
-    printf("\nl'etudiant a bien ete ajouter\n");
+    printf("\nL'etudiant a bien ete ajoute\n");
 }
 
 
@@ -180,7 +181,7 @@ int Modifier(char* Mle,float nMoy){
     while(fgets(chaine,100,buffer)!= NULL){
         fprintf(file,"%s",chaine);
     }
-    printf("la moyenne a bien ete changer en %.2f",nMoy);
+    printf("La moyenne a bien ete change en %.2f",nMoy);
     fclose(file);
     fclose(buffer);
     remove("buffer.txt");
@@ -208,7 +209,7 @@ int Suppression(char* Mle){
         }
         
     }
-    printf("\nl'etudiant a bien ete supprimer");
+    printf("\nL'etudiant a bien ete supprime");
 
     fclose(file);
     fclose(buffer);
@@ -293,7 +294,7 @@ int TriMerite(){
 
         fclose(ordre);
     }
-    printf("\nle fichier a bien ete trier\n");
+    printf("\nLe fichier a bien ete trie\n");
     file = fopen("Etudiants.txt","w");
     buffer = fopen("Ordre.txt","r");
 
@@ -378,7 +379,7 @@ int TriAlphabetique(){
     while(fgets(chaine,100,buffer)!= NULL){
         fprintf(file,"%s",chaine);
     }
-    printf("\nle fichier a bien ete triee\n");
+    printf("\nLe fichier a bien ete trie\n");
     fclose(file);
     fclose(buffer);
     remove("OrdreN.txt");
