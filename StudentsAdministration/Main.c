@@ -4,6 +4,7 @@
 #include "Fonctions.h"
 void selectionEtudiant(int mode,char* c1,float* c2);
 
+//code qui genere les options que l'utilisateur va recevoir
 int main (){
     char choix;
     int selection;
